@@ -106,7 +106,7 @@ SPI_ML/
 
 ## 🎨 Web Interface Snapshot
 
-![Image](https://github.com/user-attachments/assets/c4bdc1b2-66ae-42a0-ac27-403634fa2ae9)
+![Image](https://github.com/user-attachments/assets/60db573c-5c50-40a7-af6e-6227f4632987)
 
 
 ---
@@ -122,7 +122,7 @@ SPI_ML/
 ## 📈 Sample Output
 
 ```
-Predicted Math Score: 71.3
+The prediction is 65.13
 ```
 
 ---
