@@ -1,11 +1,6 @@
-Here is a **detailed and professional `README.md`** for your Student Performance Indicator ML project. This is written in markdown format, ready to use for GitHub or sharing in portfolios:
-
----
-
-
 # 🎓 Student Performance Indicator (SPI) – End-to-End Machine Learning Project
 
-This project is an **end-to-end machine learning application** that predicts a student’s **math score** based on their socio-demographic and academic attributes. The project is modular, production-ready, and deployable using Flask.
+This project is an **end-to-end machine learning application** that predicts a student's **math score** based on their socio-demographic and academic attributes. The project is modular, production-ready, and deployable using Flask.
 
 ---
 
@@ -16,7 +11,7 @@ Educational institutions often need early predictions of student performance to 
 ---
 
 ## 🧰 Tech Stack Used
-```bash
+
 | Category             | Tools & Technologies                        |
 |----------------------|---------------------------------------------|
 | Language             | Python                                      |
@@ -30,42 +25,35 @@ Educational institutions often need early predictions of student performance to 
 | Deployment Ready     | `.ebextensions/python.config` for AWS       |
 | Version Control      | Git                                         |
 | IDE                  | VS Code                                     |
-```
+
 ---
 
 ## 📂 Project Structure
 
-```bash
-SPI\_ML/
-│
+```
+SPI_ML/
 ├── .ebextensions/                  # AWS Elastic Beanstalk config
 │   └── python.config
-│
 ├── artifacts/                      # Stores output files (train/test data, models)
-│
 ├── notebook/                       # Jupyter notebooks for EDA & model training
 │   └── data/
 │       ├── stud.csv                # Raw dataset
 │       ├── EDA STUDENT PERFORMANCE.ipynb
 │       └── MODEL TRAINING.ipynb
-│
 ├── src/                            # Modularized Python codebase
 │   ├── components/                 # Data pipeline components
-│   │   ├── data\_ingestion.py       # Read and split data
-│   │   ├── data\_transformation.py  # Preprocessing logic
-│   │   └── model\_trainer.py        # Model selection and training
+│   │   ├── data_ingestion.py       # Read and split data
+│   │   ├── data_transformation.py  # Preprocessing logic
+│   │   └── model_trainer.py        # Model selection and training
 │   └── pipeline/
 │       ├── exception.py            # Custom error class
 │       ├── logger.py               # Logging infrastructure
 │       └── utils.py                # Reusable helper functions
-│
 ├── static/                         # CSS files for front-end
 │   └── style.css
-│
 ├── templates/                      # HTML files for Flask frontend
 │   ├── index.html
 │   └── home.html
-│
 ├── application.py                  # Flask web app
 ├── requirements.txt                # Python dependencies
 ├── setup.py                        # Project packaging
@@ -73,64 +61,71 @@ SPI\_ML/
 └── README.md                       # Project documentation
 ```
 
+---
 
 ## 🔁 End-to-End Workflow
 
 ### 1. **Data Ingestion** (`data_ingestion.py`)
-- Loads CSV from `notebook/data/`
-- Splits into train and test datasets
-- Saves files in `artifacts/`
+
+* Loads CSV from `notebook/data/`
+* Splits into train and test datasets
+* Saves files in `artifacts/`
 
 ### 2. **Data Transformation** (`data_transformation.py`)
-- Defines preprocessing pipelines for numerical and categorical features
-- Applies transformation using `ColumnTransformer`
-- Saves preprocessor object for reuse
+
+* Defines preprocessing pipelines for numerical and categorical features
+* Applies transformation using `ColumnTransformer`
+* Saves preprocessor object for reuse
 
 ### 3. **Model Training** (`model_trainer.py`)
-- Trains multiple models: Random Forest, Decision Tree, Gradient Boosting, XGBoost, etc.
-- Performs hyperparameter tuning via GridSearchCV
-- Evaluates using R² Score
-- Saves best model as `model.pkl`
+
+* Trains multiple models: Random Forest, Decision Tree, Gradient Boosting, XGBoost, etc.
+* Performs hyperparameter tuning via GridSearchCV
+* Evaluates using R² Score
+* Saves best model as `model.pkl`
 
 ### 4. **Prediction Pipeline** (`application.py`)
-- Built using Flask
-- Takes form input from users
-- Preprocesses input using saved preprocessor
-- Returns predicted math score on the webpage
 
+* Built using Flask
+* Takes form input from users
+* Preprocesses input using saved preprocessor
+* Returns predicted math score on the webpage
 
+---
 
 ## 💡 Features
 
-- ✅ Modular, scalable architecture
-- ✅ Detailed logging and exception handling
-- ✅ GridSearchCV-based model selection
-- ✅ Reusable preprocessing pipeline
-- ✅ Flask-based web UI for live predictions
-- ✅ Ready for deployment (Elastic Beanstalk compatible)
+* ✅ Modular, scalable architecture
+* ✅ Detailed logging and exception handling
+* ✅ GridSearchCV-based model selection
+* ✅ Reusable preprocessing pipeline
+* ✅ Flask-based web UI for live predictions
+* ✅ Ready for deployment (Elastic Beanstalk compatible)
 
 ---
 
-## 🎨 Web Interface Snapshot- 
-![Web UI](assets/output.png)
+## 🎨 Web Interface Snapshot
 
-> Users can input values like gender, lunch type, parental education, etc., and get a predicted math score instantly.
+> If you have a screenshot, save it in your project as `static/output.png` or `assets/output.png`
+> Then include it like this:
+
+![Web UI](static/output.png)
 
 ---
-```bash
+
 ## 📊 Sample Input Data
 
 | gender | race_ethnicity | parental_level_of_education | lunch    | test_preparation_course | reading_score | writing_score |
-|--------|----------------|------------------------------|----------|--------------------------|----------------|----------------|
-| female | group B        | bachelor's degree            | standard | none                     | 72             | 74             |
-```
+| ------ | -------------- | --------------------------- | -------- | ----------------------- | ------------- | ------------- |
+| female | group B        | bachelor's degree           | standard | none                    | 72            | 74            |
+
 ---
 
-## 📈 Output
+## 📈 Sample Output
 
-```text
+```
 Predicted Math Score: 71.3
-````
+```
 
 ---
 
@@ -147,7 +142,8 @@ cd SPI_ML
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # or venv\Scripts\activate on Windows
+source venv/bin/activate  # For Linux/Mac
+venv\Scripts\activate     # For Windows
 ```
 
 3. **Install Dependencies**
@@ -162,7 +158,8 @@ pip install -r requirements.txt
 python application.py
 ```
 
-Then go to `http://127.0.0.1:5000/` in your browser.
+Then open your browser and go to:
+`http://127.0.0.1:5000/`
 
 ---
 
@@ -179,24 +176,16 @@ This project can be deployed on **AWS Elastic Beanstalk** using:
 ## 🙋‍♀️ Author
 
 **Sharada Jibhau Sonaje**
+💼 Aspiring Data Analyst / ML Developer
+✉️ [sharadasonaje25@gmail.com](mailto:sharadasonaje25@gmail.com)
+🌐 [LinkedIn](https://www.linkedin.com/in/sharada-s-83b958273)
 
-* 💼 Aspiring Data Analyst / ML Developer
-* ✉️ [sharadasonaje25@gmail.com](mailto:sharadasonaje25@gmail.com)
-* 🌐 [LinkedIn](https://www.linkedin.com/in/sharada-s-83b958273)
-
-
+---
 
 ## ⭐ Acknowledgements
 
 * **SevenMentor** – for training and internship support
-* Scikit-learn & Flask Documentation
-* Mentor - Mahesh Kankrale
-
----
+* **Scikit-learn & Flask** – for documentation
+* **Mentor** – Mahesh Kankrale
 
 > If you found this helpful, do ⭐ the repo and share it with fellow learners!
-
-
-
-
-
