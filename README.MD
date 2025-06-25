@@ -106,8 +106,8 @@ SPI_ML/
 
 ## 🎨 Web Interface Snapshot
 
+![Image](https://github.com/user-attachments/assets/c4bdc1b2-66ae-42a0-ac27-403634fa2ae9)
 
-![Web UI](assets\Output.png)
 
 ---
 
