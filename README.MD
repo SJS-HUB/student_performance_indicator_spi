@@ -106,10 +106,8 @@ SPI_ML/
 
 ## 🎨 Web Interface Snapshot
 
-> If you have a screenshot, save it in your project as `static/output.png` or `assets/output.png`
-> Then include it like this:
 
-![Web UI](static/output.png)
+![Web UI](assets\Output.png)
 
 ---
 
