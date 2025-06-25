@@ -2,7 +2,7 @@ Here is a **detailed and professional `README.md`** for your Student Performance
 
 ---
 
-```markdown
+
 # 🎓 Student Performance Indicator (SPI) – End-to-End Machine Learning Project
 
 This project is an **end-to-end machine learning application** that predicts a student’s **math score** based on their socio-demographic and academic attributes. The project is modular, production-ready, and deployable using Flask.
@@ -16,7 +16,7 @@ Educational institutions often need early predictions of student performance to 
 ---
 
 ## 🧰 Tech Stack Used
-
+```bash
 | Category             | Tools & Technologies                        |
 |----------------------|---------------------------------------------|
 | Language             | Python                                      |
@@ -30,13 +30,12 @@ Educational institutions often need early predictions of student performance to 
 | Deployment Ready     | `.ebextensions/python.config` for AWS       |
 | Version Control      | Git                                         |
 | IDE                  | VS Code                                     |
-
+```
 ---
 
 ## 📂 Project Structure
 
-```
-
+```bash
 SPI\_ML/
 │
 ├── .ebextensions/                  # AWS Elastic Beanstalk config
@@ -72,10 +71,8 @@ SPI\_ML/
 ├── setup.py                        # Project packaging
 ├── .gitignore                      # Git ignore rules
 └── README.md                       # Project documentation
+```
 
-````
-
----
 
 ## 🔁 End-to-End Workflow
 
@@ -101,7 +98,7 @@ SPI\_ML/
 - Preprocesses input using saved preprocessor
 - Returns predicted math score on the webpage
 
----
+
 
 ## 💡 Features
 
@@ -120,13 +117,13 @@ SPI\_ML/
 > Users can input values like gender, lunch type, parental education, etc., and get a predicted math score instantly.
 
 ---
-
+```bash
 ## 📊 Sample Input Data
 
 | gender | race_ethnicity | parental_level_of_education | lunch    | test_preparation_course | reading_score | writing_score |
 |--------|----------------|------------------------------|----------|--------------------------|----------------|----------------|
 | female | group B        | bachelor's degree            | standard | none                     | 72             | 74             |
-
+```
 ---
 
 ## 📈 Output
@@ -187,13 +184,7 @@ This project can be deployed on **AWS Elastic Beanstalk** using:
 * ✉️ [sharadasonaje25@gmail.com](mailto:sharadasonaje25@gmail.com)
 * 🌐 [LinkedIn](https://www.linkedin.com/in/sharada-s-83b958273)
 
----
 
-## 📃 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
 
 ## ⭐ Acknowledgements
 
@@ -205,7 +196,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 > If you found this helpful, do ⭐ the repo and share it with fellow learners!
 
-```
+
 
 
 
